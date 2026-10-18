@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1a1a1a">
+  <title>Yoga Pangestu | Portfolio</title>
+
+  <!-- Layar pembuka hanya tampil sekali per kunjungan -->
+  <script>
+    (function () {
+      var seen = false;
+      try { seen = sessionStorage.getItem("splashSeen") === "1"; } catch (e) { }
+      if (!seen) {
+        document.documentElement.classList.add("has-splash");
+        setTimeout(function () { document.documentElement.classList.remove("has-splash"); }, 9000);  // pengaman
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/config.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/home.js" defer></script>
+</head>
+
+<body class="page-home">
+
+  <video class="bg-video" autoplay muted loop playsinline preload="auto" poster="images/background-web.jpg"
+    aria-hidden="true">
+    <source src="images/background-live.mp4" type="video/mp4">
+  </video>
+
+  <header class="topbar">
+    <a class="welcome" href="index.html" aria-label="Beranda">WELCOME<br>TO MY WEBSITE
+    </a>
+    <span class="top-note"></span>
+    <span class="top-mark" aria-hidden="true">✿</span>
+  </header>
+
+  <main>
+
+    <!-- HERO: PORT | foto | FOLIO berjajar di kolom sendiri-sendiri, tidak saling menimpa -->
+    <section class="hero" aria-label="Portofolio utama">
+      <div class="plus plus-one" aria-hidden="true">꧁✪❄✿⋆｡°</div>
+      <div class="plus plus-two" aria-hidden="true">✪❄✿⋆｡°꧂</div>
+
+      <h1 class="sr-only">Portfolio Yoga Pangestu</h1>
+      <div class="hero-stage" aria-hidden="true">
+        <span class="title-outline">PORT</span>
+        <div class="portrait-slot">
+          <img class="hero-portrait" src="images/foto-yoga.png" alt="Yoga Pangestu" data-optional>
+        </div>
+        <span class="title-solid">FOLIO</span>
+      </div>
+
+      <div class="hero-meta">
+        <span class="label-left">MAHASISWA SISTEM INFORMASI </span>
+        <p class="hero-caption">YOGA PANGESTU WINARDI </p>
+        <span class="label-right">UIN SUSKA RIAU</span>
+      </div>
+    </section>
+
+    <!-- KARTU PORTOFOLIO -->
+    <section class="orbit-section" aria-label="Pilih kartu portofolio">
+      <p class="orbit-hint">SELECT KARTU UNTUK MELIHAT LEBIH LANJUT</p>
+
+      <div class="carousel" id="carousel">
+
+        <a class="portfolio-card card-profile" href="pages/profil.html" aria-label="Buka Profil">
+          <span class="card-kicker">TENTANG SAYA</span>
+          <div class="card-art profile-art">
+            <img src="images/EMYU.jpeg" alt="Foto profil" data-optional>
+            <span>YP</span>
+          </div>
+          <strong>PROFIL</strong>
+          <small>Kenali saya</small>
+        </a>
+
+        <a class="portfolio-card card-uiux" href="pages/uiux.html" aria-label="Buka UI UX Design">
+          <span class="card-kicker">BELAJAR DESAIN</span>
+          <div class="card-art uiux-art">
+            <img src="images/uiux.jpg" alt="Contoh karya UI UX" data-optional>
+            <span>UI<br>UX</span><i></i><b></b>
+          </div>
+          <strong>UI/UX DESIGN</strong>
+          <small>Ide menjadi visual</small>
+        </a>
+
+        <a class="portfolio-card card-game" href="pages/game.html" aria-label="Buka Game">
+          <span class="card-kicker">PLAYGAME</span>
+          <div class="card-art game-art">
+            <img src="images/game.jpg" alt="Foto game" data-optional>
+            <span>GAME<br>ON</span><i>✦</i>
+          </div>
+          <strong>GAME</strong>
+          <small>Game &amp; eksplorasi</small>
+        </a>
+
+        <a class="portfolio-card card-silat" href="pages/pencak-silat.html" aria-label="Buka Pencak Silat">
+          <span class="card-kicker">PERSAUDARAAN SETIA HATI TERATE</span>
+          <div class="card-art silat-art">
+            <img src="images/logo PSHT.jpg" alt="Foto pencak silat" data-optional>
+            <span>PSHT</span><i>拳</i>
+          </div>
+          <strong>PENCAK SILAT</strong>
+          <small>Latihan &amp; perjalanan</small>
+        </a>
+
+        <a class="portfolio-card card-home" href="pages/home.html" aria-label="Buka Home">
+          <span class="card-kicker"> HOMEBASE</span>
+          <div class="card-art home-art">
+            <img src="images/RUMAH.jpeg" alt="Foto Yoga Pangestu" data-optional>
+            <span></span><i></i>
+          </div>
+          <strong>MYHOME</strong>
+          <small>Mulai dari sini</small>
+        </a>
+
+      </div>
+
+      <div class="carousel-controls">
+        <button id="pauseButton" type="button" aria-pressed="false">JEDA PUTARAN</button>
+        <span>GESER / SENTUH KARTU</span>
+      </div>
+    </section>
+
+    <!-- MEDIA SOSIAL (link diatur di js/config.js) -->
+    <section class="social-section" aria-label="Media sosial">
+      <div class="social-heading">
+        <span class="section-index">CALL MEE</span>
+        <h2>LET'S<br><em>CONNECT.</em></h2>
+        <p>Temukan saya di media sosial.</p>
+      </div>
+
+      <div class="social-links">
+        <a class="social-link" href="#" data-social="whatsapp" target="_blank" rel="noopener noreferrer">
+          <span class="social-icon">WA</span>
+          <span><b>WhatsApp</b><small>Chat langsung</small></span>
+          <span class="arrow">↗</span>
+        </a>
+        <a class="social-link" href="#" data-social="facebook" target="_blank" rel="noopener noreferrer">
+          <span class="social-icon">f</span>
+          <span><b>Facebook</b><small>Terhubung dengan saya</small></span>
+          <span class="arrow">↗</span>
+        </a>
+        <a class="social-link" href="#" data-social="instagram" target="_blank" rel="noopener noreferrer">
+          <span class="social-icon">ig</span>
+          <span><b>Instagram</b><small>Foto &amp; aktivitas</small></span>
+          <span class="arrow">↗</span>
+        </a>
+        <a class="social-link" href="#" data-social="linkedin" target="_blank" rel="noopener noreferrer">
+          <span class="social-icon">in</span>
+          <span><b>LinkedIn</b><small>Profil profesional</small></span>
+          <span class="arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span></span> YOGA PANGESTU WINARDI </span>
+    <span>CALL ME YOGG</span>
+  </footer>
+
+</body>
+
+</html>
